@@ -1,0 +1,126 @@
+.main-cont{
+    width: 100%;
+    height: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(154,185,20,1) 0%, rgba(161,208,13,1) 47%, rgba(0,212,255,1) 91%);
+    /* background-image: url(./todo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+.sub-cont{
+    width: 35%;
+    height: auto;
+    border: 2px solid black;
+    
+}
+.sub-cont h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+input{
+    margin-top: 5px;
+    width: 66%;
+    margin-left: 48px;
+    border: 2px solid black;
+}
+#id_completed{
+   margin-left: -153px;
+   padding: 10px;
+}
+label{
+    font-size: 16px;
+}
+#id_description{
+    border: 2px solid black;
+}
+button{
+    margin-left: 240px;
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+    background-color: blueviolet;
+}
+
+
+@media (max-width: 576px) {
+
+    .sub-cont{
+        width: 100%;
+        
+    }
+    .main-cont{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        border: none;
+       
+    }
+    .sub-cont h3{
+        color:red;
+        
+    }
+    input{
+        margin-top: 5px;
+        width: 100%;
+        margin-left: 0px;
+        border: 2px solid black;
+    }
+    button{
+        margin-left: 175px;
+    }
+    #id_completed{
+        margin-left:-170px;
+        padding: 10px;
+        margin-top: 5px;
+        height: 2vh;
+    }
+    #id_description{
+        width: 100%;
+    }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+    .sub-cont{
+        width: 80%;
+    
+    }
+    .main-cont{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        border: none;
+        height:100vh;
+    
+    }
+    .sub-cont h3{
+        color:black;
+    }
+    input{
+        margin-top: 5px;
+        width: 100%;
+        margin-left:0px;
+        border: 2px solid black;
+        height:4vh;
+    }
+    #id_description{
+        width: 100%;
+    }
+    #id_completed{
+        margin-left:-280px;
+        padding: 2px;
+        height: 22px;
+    }
+    button{
+        margin-left: 295px;
+    }
+
+
+
+
+}

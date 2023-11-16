@@ -1,0 +1,155 @@
+.main-container{
+    height: 90vh;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(154,185,20,1) 0%, rgba(161,208,13,1) 47%, rgba(0,212,255,1) 91%);
+}
+.sub-container{
+    width: 70%;
+    height:auto;
+    /* border: 2px solid black; */
+    box-shadow: 0 0 10px black;
+   
+}
+.heading-task h1{
+  text-align: center;
+}
+
+.task a{
+    font-size: 35px;
+}
+.task .create{
+    text-decoration: none;
+    box-shadow: 0 0 7px black;
+    color: black;
+    margin-left: 430px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+.items{
+    /* border: 1px solid black; */
+    display: flex;
+    background-color: bisque;
+    margin-top: 5px;
+    
+}
+.data{
+    /* border: 1px solid black; */
+    width: 60%;
+}
+.data p span{
+    color: red;
+}
+.options{
+   display: flex;
+   gap: 155px;
+   
+}
+.options a{
+    text-decoration: none;
+    color:black;
+}
+.logoout{
+    margin-left: 920px;
+    
+    margin-top: 5px;
+   
+    width:6%;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    
+}
+.logoout a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+@media (max-width: 576px) {
+    .sub-container {
+        width: 110%;
+        height:90vh;
+        margin-top: 20px;
+    }
+    .navbar{
+        width: 110%;
+    }
+
+    .main-container {
+        width:110%;
+    }
+    .logoout a{
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        margin-left: 300px;
+        margin-top: 10px;
+    }
+    .heading-task h1{
+        margin-left:-240px;
+      }
+
+    .items {
+        flex-direction:column; 
+        margin-top: 10px; 
+        font-size: 17px;
+    }
+
+    .data {
+        width: 100%; 
+    }
+
+    .options {
+        gap: 10px;
+    }
+
+    .logoout {
+        margin-left: 0;
+        width: 100%; 
+        margin-top: 10px; 
+    }
+    .task .create{
+        margin-left: 100px;
+        margin-top: 30px;
+        
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .sub-container {
+        width: 100%;
+        height:117vh;
+        margin-top: 20px;
+        
+    }
+    .main-container {
+        width:115%;
+        height:auto;
+    }
+    .heading-task h1{
+        margin-left:-650px;
+      }
+      .items {
+        margin-top: 10px; 
+        font-size: 25px;
+    }
+    .task .create{
+        margin-left: 360px;
+        padding: 5px;
+        
+    }
+    .logoout a{
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        margin-left:-200px;
+        margin-top: 10px;
+    }
+    .navbar{
+        width: 115%;
+    }
+    
+}

@@ -1,0 +1,35 @@
+{% extends 'index.html'%}
+{% block content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/delete.css'%}">
+</head>
+<body>
+    <div class="main-cont">
+        <div class="sub-cont">
+            <div class="head">
+                <p>Are you sure want to delete this Task </p>
+            </div>
+            <form method="post">
+                {% csrf_token%}
+                <h2>Task:{{tasks}}</h2>
+                <h3>Description:{{tasks.description}}</h3>
+                <button type="submit" onclick="alert('Task Deleted Successfully')">Delete</button>
+            </form>
+            <div class="link">
+                <a href="{% url 'task' %}">Go Back</a>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+{% endblock content%}

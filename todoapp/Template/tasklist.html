@@ -1,0 +1,65 @@
+{% extends 'index.html'%}
+{% block content %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/tasklist.css'%}">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="logoout">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}">logout</a>
+                {% else %}
+                {% endif%}
+            </div>
+
+            <div class="heading-task">
+                <h1>
+                    Hello, {{ user.username|title }}
+                </h1>
+            </div>
+            <div class="task">
+                {% for i in object_list %}
+                <div class="items">
+                    <div class="data">
+                        {{i.task}}
+                        {{i.created}}
+                        {% if i.completed %}
+                        <p style="text-decoration: line-through;"> status:completed</p>
+                        {% else %}
+                        <p>status:<span>Pending</span></p>
+                        {% endif%}
+                    </div>
+                    <div class="options">
+                        <a href="{% url 'edit' i.id%}"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a href="{% url 'del' i.id%}"><i class="fa-solid fa-trash"></i></a>
+                        <a href="{% url 'detailview' i.id%}"><i class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+                {%endfor%}
+                <a class="create" href="{% url 'create'%}">Create New Task</a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+{% endblock content %}
